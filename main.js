@@ -22,19 +22,10 @@ const courses = {
 const meetLink = 'https://meet.google.com/rzw-rnwi-nyn';
 let currentCourseKey = null;
 
-function openAuthModal(courseKey) {
-    currentCourseKey = courseKey;
-    const course = courses[courseKey];
-    document.getElementById('modalTitle').innerText = course.name;
-    document.getElementById('authModal').style.display = 'flex';
-    document.getElementById('studentId').value = '';
-    document.getElementById('studentId').focus();
-    document.getElementById('errorMessage').innerText = '';
+
 }
 
-function closeModal() {
-    document.getElementById('authModal').style.display = 'none';
-    currentCourseKey = null;
+
 }
 
 function validateAccess() {
@@ -69,3 +60,4 @@ document.getElementById('studentId')?.addEventListener('keypress', function (e) 
         validateAccess();
     }
 });
+
